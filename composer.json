@@ -3,26 +3,45 @@
 		{
 			"type": "composer",
 			"url": "http://wpackagist.org"
-		}
+		},
+        {
+            "type"    : "package",
+            "package" : {
+                "name"    : "intuit-community-portal",
+                "version" : "dev-master",
+                "type" : "wordpress-theme",
+                "source"  : {
+                    "url" : "git@gitlab.second2digital.com:intuit/itt068.git",
+                    "type" : "git",
+                    "reference" : "origin/master"
+                }
+            }
+        }
 	],
 	"require": {
 		"php": ">=5.4",
+        "composer/installers": "~1.0",
         "composer/composer": "1.0.0-alpha11",
         "wp-cli/wp-cli": "dev-master",
         "wp-cli/php-cli-tools": "dev-master",
 		"johnpbloch/wordpress": "4.2",
 
-        // Plugins go here
         "wpackagist-plugin/timber-library": "0.22.5",
         "wpackagist-plugin/custom-field-suite": "2.5.4",
         "wpackagist-plugin/enable-media-replace": "3.0.4",
         "wpackagist-plugin/revision-control": "2.3.2",
         "wpackagist-plugin/seamless-sticky-custom-post-types": "1.4",
         "wpackagist-plugin/simple-local-avatars": "2.0",
-        "wpackagist-plugin/wp-custom-taxonomy-meta": "1.0.0"
+        "wpackagist-plugin/wp-custom-taxonomy-meta": "1.0.0",
+
+        "intuit-community-portal": "dev-master"
 	},
 	"extra": {
-		"wordpress-install-dir": "wp"
+		"wordpress-install-dir": "wp",
+
+        "installer-paths" : {
+            "wp-content/themes/{$name}/": ["type:wordpress-theme"]
+        }
 	},
     "scripts": {
         "post-install-cmd": [

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "638fe1b60f1d40c5de839922de40871c",
-    "content-hash": "e7f160c1d361245ccadc8fbee42e58a4",
+    "hash": "f89c6d28f4818100ddd1c307009b3861",
+    "content-hash": "0297db17c245985efc436035a2a5cfa6",
     "packages": [
         {
             "name": "composer/composer",
@@ -300,6 +300,17 @@
                 "validator"
             ],
             "time": "2015-10-05 11:27:42"
+        },
+        {
+            "name": "intuit-community-portal",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@gitlab.second2digital.com:intuit/itt068.git",
+                "reference": "origin/master"
+            },
+            "type": "wordpress-theme",
+            "time": "2016-02-11 10:10:19"
         },
         {
             "name": "johnpbloch/wordpress",
@@ -1571,7 +1582,8 @@
     "stability-flags": {
         "composer/composer": 15,
         "wp-cli/wp-cli": 20,
-        "wp-cli/php-cli-tools": 20
+        "wp-cli/php-cli-tools": 20,
+        "intuit-community-portal": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
