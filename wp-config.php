@@ -56,18 +56,17 @@ define( 'WPLANG', '' );
 // ini_set( 'display_errors', 1 );
 // define( 'WP_DEBUG_DISPLAY', true );
 
-define('WP_DEBUG', true);
-
-define( 'SCRIPT_DEBUG', true );
-
-define('ENVIRONMENT', 'LOCAL');
-
 // =================================================================
 // Debug mode
 // Debugging? Enable these. Can also enable them in local-config.php
 // =================================================================
-// define( 'SAVEQUERIES', true );
-// define( 'WP_DEBUG', true );
+if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
+    define( 'WP_DEBUG', true );
+    define( 'SCRIPT_DEBUG', true );
+} else {
+    define( 'WP_DEBUG', false );
+    define( 'SCRIPT_DEBUG', false );
+}
 
 // ======================================
 // Load a Memcached config if we have one
