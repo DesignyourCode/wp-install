@@ -1,0 +1,4 @@
+vendor/
+wp/
+wp-content/
+local-config.php
