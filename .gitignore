@@ -1,5 +1,4 @@
 vendor/
 wp/
-wp-content/
 local-config.php
 composer.lock
