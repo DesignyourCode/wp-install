@@ -1,0 +1,43 @@
+{
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://wpackagist.org"
+        },
+        {
+            "type"    : "package",
+            "package" : {
+                "name"    : "your-theme-name",
+                "version" : "dev-master",
+                "type" : "wordpress-theme",
+                "source"  : {
+                    "url" : "git-path-to-theme",
+                    "type" : "git",
+                    "reference" : "origin/master"
+                }
+            }
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "composer/installers": "~1.0",
+        "composer/composer": "1.0.0-alpha11",
+        "wp-cli/wp-cli": "dev-master",
+        "wp-cli/php-cli-tools": "dev-master",
+        "johnpbloch/wordpress": "4.2",
+
+        "your-theme-name": "dev-master"
+    },
+    "extra": {
+        "wordpress-install-dir": "wp",
+
+        "installer-paths" : {
+            "wp-content/themes/{$name}/": ["type:wordpress-theme"]
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "wp plugin activate --all"
+        ]
+    }
+}
