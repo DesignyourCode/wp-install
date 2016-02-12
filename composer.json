@@ -31,7 +31,7 @@
         "generate-salts": [
             "echo '<?php' > salt.php && curl -L https://api.wordpress.org/secret-key/1.1/salt/ >> salt.php"
         ],
-        "post-install-cmd": [
+        "post-create-project-cmd": [
             "composer run generate-salts",
             "wp plugin activate --all"
         ]
