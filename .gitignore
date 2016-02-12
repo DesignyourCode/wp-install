@@ -4,3 +4,4 @@ wp-content/plugins/*
 wp-content/themes/*
 local-config.php
 composer.lock
+salt.php
