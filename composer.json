@@ -34,6 +34,9 @@
         "post-create-project-cmd": [
             "composer run generate-salts",
             "wp plugin activate --all"
+        ],
+        "compile": [
+            "php bin/populate-config-from-env.php"
         ]
     }
 }
