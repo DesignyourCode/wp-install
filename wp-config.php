@@ -55,12 +55,15 @@ define( 'WPLANG', '' );
 // Debug mode
 // Debugging? Enable these. Can also enable them in local-config.php
 // =================================================================
-if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
-    define( 'WP_DEBUG', true );
-    define( 'SCRIPT_DEBUG', true );
-} else {
+if (
+    !file_exists( dirname( __FILE__ ) . '/local-config.php' ) &&
+    !getenv('WP_DEBUG')
+) {
     define( 'WP_DEBUG', false );
     define( 'SCRIPT_DEBUG', false );
+} else {
+    define( 'WP_DEBUG', true );
+    define( 'SCRIPT_DEBUG', true );
 }
 
 // ======================================
