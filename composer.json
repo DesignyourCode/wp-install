@@ -28,18 +28,12 @@
         }
     },
     "scripts": {
-        "generate-salts": [
-            "echo '<?php' > salt.php && curl -sSL https://api.wordpress.org/secret-key/1.1/salt/ >> salt.php"
-        ],
-        "post-create-project-cmd": [
-            "composer run generate-salts",
-            "wp plugin activate --all"
-        ],
         "compile": [
             "php bin/populate-config-from-env.php",
+            "php bin/generate-salts.php",
+            "wp plugin activate --all",
             "wp plugin activate timber-library || true",
-            "wp theme activate timber-starter-theme || true",
-            "composer run generate-salts"
+            "wp theme activate timber-starter-theme || true"
         ]
     }
 }
