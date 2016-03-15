@@ -31,7 +31,6 @@
         "compile": [
             "php bin/populate-config-from-env.php",
             "php bin/generate-salts.php",
-            "wp plugin activate --all",
             "wp plugin activate timber-library || true",
             "wp theme activate timber-starter-theme || true"
         ]
