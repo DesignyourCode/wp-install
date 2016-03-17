@@ -20,6 +20,12 @@ if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
 define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/wp-content' );
 define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/wp-content' );
 
+// =================================
+// Setup S3 parameters for wp-offload
+// ==================================
+define('DBI_AWS_ACCESS_KEY_ID', '%%DBI_AWS_ACCESS_KEY_ID%%');
+define('DBI_AWS_SECRET_ACCESS_KEY', '%%DBI_AWS_SECRET_ACCESS_KEY%%');
+
 // ================================================
 // You almost certainly do not want to change these
 // ================================================

@@ -9,11 +9,14 @@
     ],
     "require": {
         "php": ">=5.4",
+        "ext-gd": "*",
         "composer/installers": "@stable",
         "wp-cli/wp-cli": "@stable",
         "wp-cli/php-cli-tools": "@stable",
         "johnpbloch/wordpress": "@stable",
 
+        "wpackagist-plugin/amazon-web-services": "@stable",
+        "wpackagist-plugin/amazon-s3-and-cloudfront": "@stable",
         "upstatement/timber-starter-theme": "dev-master"
     },
     "extra": {
@@ -32,6 +35,8 @@
             "php bin/populate-config-from-env.php",
             "php bin/generate-salts.php",
             "wp plugin activate timber-library || true",
+            "wp plugin activate amazon-web-services || true",
+            "wp plugin activate amazon-s3-and-cloudfront || true",
             "wp theme activate timber-starter-theme || true"
         ]
     }

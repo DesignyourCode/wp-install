@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "91b237656b857c8cb17bad79433b3628",
-    "content-hash": "f1e368717c2055a3e8a9bb231a40d134",
+    "hash": "974b5af84e47e907550b18bcd738f235",
+    "content-hash": "116fa496ab779ae313e53570f5ce7735",
     "packages": [
         {
             "name": "composer/installers",
@@ -1074,11 +1074,51 @@
             "time": "2016-01-07 16:36:32"
         },
         {
+            "name": "wpackagist-plugin/amazon-s3-and-cloudfront",
+            "version": "1.0.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/amazon-s3-and-cloudfront/",
+                "reference": "tags/1.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/amazon-s3-and-cloudfront.1.0.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/amazon-s3-and-cloudfront/"
+        },
+        {
+            "name": "wpackagist-plugin/amazon-web-services",
+            "version": "0.3.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/amazon-web-services/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/amazon-web-services.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/amazon-web-services/"
+        },
+        {
             "name": "wpackagist-plugin/timber-library",
             "version": "0.22.5",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/timber-library/",
+                "url": "https://plugins.svn.wordpress.org/timber-library/",
                 "reference": "tags/0.22.5"
             },
             "dist": {
@@ -1102,12 +1142,15 @@
         "wp-cli/wp-cli": 0,
         "wp-cli/php-cli-tools": 0,
         "johnpbloch/wordpress": 0,
+        "wpackagist-plugin/amazon-web-services": 0,
+        "wpackagist-plugin/amazon-s3-and-cloudfront": 0,
         "upstatement/timber-starter-theme": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.4"
+        "php": ">=5.4",
+        "ext-gd": "*"
     },
     "platform-dev": []
 }
