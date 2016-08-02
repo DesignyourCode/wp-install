@@ -1,9 +1,6 @@
 !*.gitkeep/
 vendor/
 wp/
-wp-content/languages/*
-wp-content/plugins/*
-wp-content/themes/*
-wp-content/upgrade/*
+wp-content/
 local-config.php
 salt.php
