@@ -1,5 +1,5 @@
 {
-    "name": "designyourcode/wordpress-composer",
+    "name": "designyourcode/wp-install",
     "description": "Install WordPress with Composer.",
     "repositories": [
         {
