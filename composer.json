@@ -34,7 +34,7 @@
         "compile": [
             "php bin/populate-config-from-env.php",
             "php bin/generate-salts.php",
-            "wp core is-installed || php bin/install-site.php"
+            "wp core is-installed || php bin/install-site.php",
             "wp plugin activate timber-library || true",
             "wp plugin activate amazon-web-services || true",
             "wp plugin activate amazon-s3-and-cloudfront || true",

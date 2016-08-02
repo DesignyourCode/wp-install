@@ -1,5 +1,6 @@
 vendor/
 wp/
+wp-content/languages/*
 wp-content/plugins/*
 wp-content/themes/*
 local-config.php
