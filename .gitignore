@@ -1,7 +1,9 @@
+!*.gitkeep/
 vendor/
 wp/
 wp-content/languages/*
 wp-content/plugins/*
 wp-content/themes/*
+wp-content/upgrade/*
 local-config.php
 salt.php
