@@ -31,6 +31,9 @@
         }
     },
     "scripts": {
+        "local": [
+            "cp local-config.php.dist local-config.php"
+        ],
         "compile": [
             "php bin/populate-config-from-env.php",
             "php bin/generate-salts.php",
