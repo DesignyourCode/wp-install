@@ -4,3 +4,4 @@ parameters:
     db_user: root
     db_password: root
     db_host: localhost
+    heroku: false

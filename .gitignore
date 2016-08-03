@@ -1,6 +1,10 @@
 !*.gitkeep/
+app/config/parameters.yml
 vendor/
 wp/
-wp-content/
-local-config.php
 salt.php
+wp-content/plugins/*
+wp-content/upgrade/*
+wp-content/uploads/*
+wp-content/languages/*
+wp-content/themes/timber-starter-theme/*
