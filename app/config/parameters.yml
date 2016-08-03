@@ -1,0 +1,6 @@
+# This file is auto-generated during the composer install
+parameters:
+    db_name: wp-install
+    db_user: root
+    db_password: root
+    db_host: localhost

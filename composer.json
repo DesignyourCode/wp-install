@@ -4,7 +4,7 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "http://wpackagist.org"
+            "url": "https://wpackagist.org"
         }
     ],
     "require": {
@@ -14,7 +14,8 @@
         "wp-cli/wp-cli": "@stable",
         "wp-cli/php-cli-tools": "@stable",
         "johnpbloch/wordpress": "@stable",
-
+        "incenteev/composer-parameter-handler": "~2.0",
+        "mustangostang/spyc": "dev-master",
         "wpackagist-plugin/amazon-web-services": "@stable",
         "wpackagist-plugin/amazon-s3-and-cloudfront": "@stable",
         "upstatement/timber-starter-theme": "dev-master"
@@ -28,11 +29,17 @@
             "wp-content/themes/{$name}": [
                 "type:wordpress-theme"
             ]
+        },
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
         }
     },
     "scripts": {
-        "local": [
-            "cp local-config.php.dist local-config.php"
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
         ],
         "compile": [
             "php bin/populate-config-from-env.php",
