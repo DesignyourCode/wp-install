@@ -7,21 +7,20 @@ Install and run wordpress using composer only.
 ## Getting Started
 
 1. Fork this project for your own site
-2. Run:
-```
-composer install
-composer local
-```
-3. Add your DB config to `local-config.php`
+2. Run `composer install`
+3. Add your config settings during the `composer install`
 4. Add your theme folder into `wp-content/themes`
 
-    >  **Tip:** The [timber-starter-theme](https://github.com/upstatement/timber-starter-theme) is included as a dependency that you can use as a parent theme
+    >  **Tip:** The [timber-starter-theme](https://github.com/upstatement/timber-starter-theme) is included as a dependency that you can use as a parent theme. This is ignored in git, so you do not need to worry about committing this in your repo.
 
 5. Add any required themes and plugins, either from their [wpackagist](http://wpackagist.org/) packages or by adding them in the right place in `wp-content/`
 6. Run `composer update` to pull in the latest version of the wordpress core and any other dependencies you've defined
 7. Point a web server at the root of the project
 
-   > **Tip:** If you don't have one set up, you can use the PHP built-in webserver, like this: `php -S localhost:8000`
+    > **Tip:** If you don't have one set up, you can use the PHP built-in webserver, like this: `php -S localhost:8000`
+
+8. Once you have gone through the standard Wordpress setup, you will need to set the Wordpress URL.
+    > **Tip:** Settings > General to not include the /wp.
 
 ## Heroku support
 This project is set up to run on [Heroku](https://www.heroku.com/home) with minimal effort.
