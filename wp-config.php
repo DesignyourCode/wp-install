@@ -8,7 +8,7 @@ require(dirname( __FILE__ ) . '/vendor/autoload.php');
 $config = spyc_load_file(dirname( __FILE__ ) . '/app/config/parameters.yml');
 $var = $config['parameters'];
 
-if ($var['heroku'] === false) {
+if ($var['env'] !== 'heroku') {
     define( 'DB_NAME', $var['db_name'] );
     define( 'DB_USER', $var['db_user'] );
     define( 'DB_PASSWORD', $var['db_password'] );
@@ -68,15 +68,12 @@ define( 'WPLANG', '' );
 // Debug mode
 // Debugging? Enable these. Can also enable them in local-config.php
 // =================================================================
-if (
-    !file_exists( dirname( __FILE__ ) . '/local-config.php' ) &&
-    !getenv('WP_DEBUG')
-) {
-    define( 'WP_DEBUG', false );
-    define( 'SCRIPT_DEBUG', false );
-} else {
+if ($var['debug'] !== true) {
     define( 'WP_DEBUG', true );
     define( 'SCRIPT_DEBUG', true );
+} else {
+    define( 'WP_DEBUG', false );
+    define( 'SCRIPT_DEBUG', false );
 }
 
 // ======================================
