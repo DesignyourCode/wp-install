@@ -40,26 +40,14 @@
 // // Write new config file
 // file_put_contents('../wp-config.php', $config);
 
-use Composer\Script\Event;
+$url = getenv('CLEARDB_DATABASE_URL');
 
-class HerokuHandler {
-    public static function herokuCompiler(Event $event)
-    {
+if ($url) {
+    $url = parse_url($url);
+    putenv("SYMFONY__DATABASE_HOST={$url['host']}");
+    putenv("SYMFONY__DATABASE_USER={$url['user']}");
+    putenv("SYMFONY__DATABASE_PASSWORD={$url['pass']}");
 
-        $url = getenv('CLEARDB_DATABASE_URL');
-
-        if ($url) {
-            $url = parse_url($url);
-            putenv("SYMFONY__DATABASE_HOST={$url['host']}");
-            putenv("SYMFONY__DATABASE_USER={$url['user']}");
-            putenv("SYMFONY__DATABASE_PASSWORD={$url['pass']}");
-
-            $db = substr($url['path'], 1);
-            putenv("SYMFONY__DATABASE_NAME={$db}");
-        }
-
-        $io = $event->getIO();
-        $io->write('CLEARDB_DATABASE_URL=' . getenv('CLEARDB_DATABASE_URL'));
-
-    }
+    $db = substr($url['path'], 1);
+    putenv("SYMFONY__DATABASE_NAME={$db}");
 }
