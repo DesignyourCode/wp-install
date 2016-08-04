@@ -20,6 +20,9 @@
         "wpackagist-plugin/amazon-s3-and-cloudfront": "@stable",
         "upstatement/timber-starter-theme": "dev-master"
     },
+    "require-dev": {
+        "heroku/heroku-buildpack-php": "*"
+    },
     "extra": {
         "wordpress-install-dir": "wp",
         "installer-paths": {
