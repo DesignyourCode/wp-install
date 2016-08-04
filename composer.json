@@ -34,18 +34,21 @@
             ]
         },
         "incenteev-parameters": {
-            "file": "app/config/parameters.yml"
+            "file": "app/config/parameters.yml",
+            "env-map": {
+                "database_name": "SYMFONY__DATABASE_NAME",
+                "database_user": "SYMFONY__DATABASE_USER",
+                "database_host": "SYMFONY__DATABASE_HOST",
+                "database_password": "SYMFONY__DATABASE_PASSWORD"
+            }
         }
     },
     "scripts": {
-        "post-install-cmd": [
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
-        ],
-        "post-update-cmd": [
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        "pre-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Incenteev\\ParameterHandler\\HerokuEnvironment::populateEnvironment"
         ],
         "compile": [
-            "php bin/populate-config-from-env.php",
             "php bin/generate-salts.php",
             "wp core is-installed || php bin/install-site.php",
             "wp plugin activate timber-library || true",
@@ -53,5 +56,6 @@
             "wp plugin activate amazon-s3-and-cloudfront || true",
             "wp theme activate timber-starter-theme || true"
         ]
-    }
+    },
+    "minimum-stability": "stable"
 }

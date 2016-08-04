@@ -13,11 +13,6 @@ if (getenv('STACK') === false) {
     define( 'DB_USER', $var['db_user'] );
     define( 'DB_PASSWORD', $var['db_password'] );
     define( 'DB_HOST', $var['db_host'] );
-} else {
-    define( 'DB_NAME', '%%DB_NAME%%' );
-    define( 'DB_USER', '%%DB_USER%%' );
-    define( 'DB_PASSWORD', '%%DB_PASSWORD%%' );
-    define( 'DB_HOST', '%%DB_HOST%%' );
 }
 
 // ========================
