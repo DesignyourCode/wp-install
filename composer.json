@@ -44,11 +44,11 @@
         }
     },
     "scripts": {
-        "pre-install-cmd": [
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
-            "Incenteev\\ParameterHandler\\HerokuEnvironment::populateEnvironment"
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
         ],
         "compile": [
+            "php bin/populate-db.php",
             "php bin/generate-salts.php",
             "wp core is-installed || php bin/install-site.php",
             "wp plugin activate timber-library || true",
