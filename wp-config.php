@@ -10,7 +10,7 @@ $var = $config['parameters'];
 
 var_dump(getenv('STACK'));
 
-if (getenv('STACK') === false) {
+if (getenv('STACK') !== '') {
     define( 'DB_NAME', $var['db_name'] );
     define( 'DB_USER', $var['db_user'] );
     define( 'DB_PASSWORD', $var['db_password'] );
