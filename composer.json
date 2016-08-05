@@ -10,6 +10,7 @@
     "require": {
         "php": ">=5.4",
         "ext-gd": "*",
+        "heroku/heroku-buildpack-php": "*",
         "composer/installers": "@stable",
         "wp-cli/wp-cli": "@stable",
         "wp-cli/php-cli-tools": "@stable",
@@ -19,9 +20,6 @@
         "wpackagist-plugin/amazon-web-services": "@stable",
         "wpackagist-plugin/amazon-s3-and-cloudfront": "@stable",
         "upstatement/timber-starter-theme": "dev-master"
-    },
-    "require-dev": {
-        "heroku/heroku-buildpack-php": "*"
     },
     "extra": {
         "wordpress-install-dir": "wp",
