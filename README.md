@@ -2,7 +2,7 @@
 ![alt text](http://cdn.designyourcode.io/wp-install-logo.jpg "WP Install")
 
 # Welcome to WP Install
-THe starter kit for install and managing Wordpress using composer. You can also deploy to Heroku.
+The starter kit for install and managing Wordpress using composer. You can also deploy to Heroku.
 
 ## Getting Started
 
