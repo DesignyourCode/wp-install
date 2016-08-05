@@ -5,10 +5,12 @@
 // ===================================================
 require(dirname( __FILE__ ) . '/vendor/autoload.php');
 
-$config = spyc_load_file(dirname( __FILE__ ) . '/app/config/parameters.yml');
+$parameters = dirname( __FILE__ ) . '/app/config/parameters.yml';
+
+$config = spyc_load_file($parameters);
 $var = $config['parameters'];
 
-if (getenv('STACK') === false) {
+if (file_exists($parameters)) {
     define( 'DB_NAME', $var['db_name'] );
     define( 'DB_USER', $var['db_user'] );
     define( 'DB_PASSWORD', $var['db_password'] );
@@ -38,10 +40,10 @@ define('DBI_AWS_SECRET_ACCESS_KEY', '%%DBI_AWS_SECRET_ACCESS_KEY%%');
 define( 'DB_CHARSET', 'utf8' );
 define( 'DB_COLLATE', '' );
 
-// ==========================================
+// ===========================================
 // Salts, for security
-// These are generate from 'composer compile'
-// ==========================================
+// These are generated from 'composer compile'
+// ===========================================
 if ( file_exists( __DIR__ . '/salt.php' ) ) {
     require __DIR__ . '/salt.php';
 }
@@ -68,10 +70,12 @@ define( 'WPLANG', '' );
 // Debug mode
 // Enable these in app/config/paramters.yml or on heroku in config vars
 // ====================================================================
-if (getenv('STACK') === false) {
+if (!file_exists($parameters)) {
     define( 'WP_DEBUG', getenv('DEBUG') );
     define( 'SCRIPT_DEBUG', getenv('DEBUG') );
 } else {
+    
+
     if ($var['debug'] !== true) {
         define( 'WP_DEBUG', true );
         define( 'SCRIPT_DEBUG', true );
