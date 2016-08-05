@@ -7,7 +7,7 @@ Install and run wordpress using composer only.
 ## Getting Started
 
 1. In your local phpMyAdmin, create a new database.
-2. Run `composer create-project designyourcode/wp-install <project-name-here> -sdev --repository '{"type": "vcs", "url": "https://github.com/DesignyourCode/wp-install.git"}'`.
+2. Run `composer create-project designyourcode/wp-install <project-name-here>`
 3. Follow the onscreen instructions to add your config settings.
 4. Add your theme into `wp-content/themes` (this can then be committed with the rest of your project).
 
