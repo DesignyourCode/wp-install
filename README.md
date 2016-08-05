@@ -1,5 +1,7 @@
 # Wordpress Composer
 
+![alt text](http://cdn.designyourcode.io/wp-install-logo.jpg "WP Install")
+
 Install and run wordpress using composer only.
 
 ## Getting Started
@@ -40,7 +42,9 @@ If you would like to deploy a wordpress site directly to Heroku use the button b
     
     > **Tip:** It is likely that you can simply do:
     > `git add --all`
+    >
     > `git commit -m "Your commit message"`
+    >
     > `git push heroku master`
 
 ## Licence
