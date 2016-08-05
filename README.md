@@ -1,8 +1,8 @@
-# Wordpress Composer
 
 ![alt text](http://cdn.designyourcode.io/wp-install-logo.jpg "WP Install")
 
-Install and run wordpress using composer only.
+# Welcome to WP Install
+THe starter kit for install and managing Wordpress using composer. You can also deploy to Heroku.
 
 ## Getting Started
 
