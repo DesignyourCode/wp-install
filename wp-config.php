@@ -5,12 +5,18 @@
 // ===================================================
 require(dirname( __FILE__ ) . '/vendor/autoload.php');
 
+use Composer\Script\Event;
+
+public static function herokuCompiler(Event $event)
+    {
+        var_dump($event);
+    }
+}
+
 $config = spyc_load_file(dirname( __FILE__ ) . '/app/config/parameters.yml');
 $var = $config['parameters'];
 
-var_dump(getenv('STACK'));
-
-if (getenv('STACK') !== '') {
+if (getenv('STACK') === false) {
     define( 'DB_NAME', $var['db_name'] );
     define( 'DB_USER', $var['db_user'] );
     define( 'DB_PASSWORD', $var['db_password'] );
@@ -21,7 +27,6 @@ if (getenv('STACK') !== '') {
     define( 'DB_PASSWORD', '%%DB_PASSWORD%%' );
     define( 'DB_HOST', '%%DB_HOST%%' );
 }
-
 
 // ========================
 // Custom Content Directory
