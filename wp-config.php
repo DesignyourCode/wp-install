@@ -8,6 +8,8 @@ require(dirname( __FILE__ ) . '/vendor/autoload.php');
 $config = spyc_load_file(dirname( __FILE__ ) . '/app/config/parameters.yml');
 $var = $config['parameters'];
 
+var_dump(getenv('STACK'));
+
 if (getenv('STACK') === false) {
     define( 'DB_NAME', $var['db_name'] );
     define( 'DB_USER', $var['db_user'] );
