@@ -11,8 +11,6 @@
         "php": ">=5.4",
         "ext-gd": "*",
         "composer/installers": "@stable",
-        "wp-cli/wp-cli": "@stable",
-        "wp-cli/php-cli-tools": "@stable",
         "johnpbloch/wordpress": "@stable",
         "incenteev/composer-parameter-handler": "~2.0",
         "mustangostang/spyc": "dev-master",
@@ -43,13 +41,8 @@
         ],
         "compile": [
             "rm -rf app/config/parameters.yml",
-            "php bin/populate-db.php",
-            "php bin/generate-salts.php",
-            "wp core is-installed || php bin/install-site.php",
-            "wp plugin activate timber-library || true",
-            "wp plugin activate amazon-web-services || true",
-            "wp plugin activate amazon-s3-and-cloudfront || true",
-            "wp theme activate timber-starter-theme || true"
+            "php bin/setup-config.php",
+            "php bin/generate-salts.php"
         ]
     },
     "minimum-stability": "stable"

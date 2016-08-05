@@ -8,6 +8,9 @@
         }
     },
     "addons": [
-        "cleardb"
+        "cleardb",
+        {
+            "plan": "ignite"
+        }
     ]
 }

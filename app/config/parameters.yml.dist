@@ -3,5 +3,4 @@ parameters:
     db_user:     root
     db_password: root
     db_host:     localhost
-    env:         dev | prod | heroku
     debug:       true

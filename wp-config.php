@@ -74,15 +74,8 @@ if (!file_exists($parameters)) {
     define( 'WP_DEBUG', getenv('DEBUG') );
     define( 'SCRIPT_DEBUG', getenv('DEBUG') );
 } else {
-    
-
-    if ($var['debug'] !== true) {
-        define( 'WP_DEBUG', true );
-        define( 'SCRIPT_DEBUG', true );
-    } else {
-        define( 'WP_DEBUG', false );
-        define( 'SCRIPT_DEBUG', false );
-    }
+    define( 'WP_DEBUG', $var['debug'] );
+    define( 'SCRIPT_DEBUG', $var['debug'] );
 }
 
 // ======================================
