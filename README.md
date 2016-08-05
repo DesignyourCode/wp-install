@@ -2,8 +2,6 @@
 
 Install and run wordpress using composer only.
 
-## **This is a work in progress!**
-
 ## Getting Started
 
 1. In your local phpMyAdmin, create a new database.
