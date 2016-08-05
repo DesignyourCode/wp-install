@@ -42,6 +42,7 @@
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
         ],
         "compile": [
+            "rm -rf app/config/parameters.yml",
             "php bin/populate-db.php",
             "php bin/generate-salts.php",
             "wp core is-installed || php bin/install-site.php",

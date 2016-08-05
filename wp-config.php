@@ -5,14 +5,6 @@
 // ===================================================
 require(dirname( __FILE__ ) . '/vendor/autoload.php');
 
-use Composer\Script\Event;
-
-public static function herokuCompiler(Event $event)
-    {
-        var_dump($event);
-    }
-}
-
 $config = spyc_load_file(dirname( __FILE__ ) . '/app/config/parameters.yml');
 $var = $config['parameters'];
 
@@ -72,16 +64,21 @@ define( 'WPLANG', '' );
 // ini_set( 'display_errors', 1 );
 // define( 'WP_DEBUG_DISPLAY', true );
 
-// =================================================================
+// ====================================================================
 // Debug mode
-// Debugging? Enable these. Can also enable them in local-config.php
-// =================================================================
-if ($var['debug'] !== true) {
-    define( 'WP_DEBUG', true );
-    define( 'SCRIPT_DEBUG', true );
+// Enable these in app/config/paramters.yml or on heroku in config vars
+// ====================================================================
+if (getenv('STACK') === false) {
+    define( 'WP_DEBUG', getenv('DEBUG') );
+    define( 'SCRIPT_DEBUG', getenv('DEBUG') );
 } else {
-    define( 'WP_DEBUG', false );
-    define( 'SCRIPT_DEBUG', false );
+    if ($var['debug'] !== true) {
+        define( 'WP_DEBUG', true );
+        define( 'SCRIPT_DEBUG', true );
+    } else {
+        define( 'WP_DEBUG', false );
+        define( 'SCRIPT_DEBUG', false );
+    }
 }
 
 // ======================================
