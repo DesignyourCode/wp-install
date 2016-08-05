@@ -1,0 +1,13 @@
+{
+    "name": "wp-install",
+    "env": {
+        "DEBUG": {
+            "description": "Enable debug mode for Wordpress",
+            "required": "true",
+            "value": "false"
+        }
+    },
+    "addons": [
+        "cleardb"
+    ]
+}
