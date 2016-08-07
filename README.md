@@ -11,7 +11,7 @@ The starter kit for install and managing Wordpress using composer. You can also 
 3. Follow the onscreen instructions to add your config settings.
 4. Add your theme into `wp-content/themes` (this can then be committed with the rest of your project).
 
-    >  **Tip:** The [timber-starter-theme](https://github.com/upstatement/timber-starter-theme) is included as a dependency that you can use as a parent theme. This is ignored in git, so you do not need to worry about committing this in your repo.
+    >  **Tip:** If your theme is built upon the [timber-library](https://en-gb.wordpress.org/plugins/timber-library/) plugin, you can simply commit yout theme. The (latest version) of the plugin is installed by default. If you DO NOT want to use Timber, just remove it from `composer.json`.
 
 5. Add any required themes and plugins, either from their [wpackagist](http://wpackagist.org/) packages or by adding them in the right place in `wp-content/`
 6. Use a local PHP server and point it at your site.

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1fa81476adec66871a32309f404be826",
-    "content-hash": "2f51ddaa2e01fc30030ada3f7819745b",
+    "hash": "75364a7d9b2a62b39e9de3f5832cc446",
+    "content-hash": "9fc385ca06ba65cfd5df2ead6892c096",
     "packages": [
         {
             "name": "composer/installers",
@@ -345,42 +345,6 @@
             "time": "2016-07-17 14:02:08"
         },
         {
-            "name": "upstatement/timber-starter-theme",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/timber/starter-theme.git",
-                "reference": "239865739fad4a09f400c33a56424b30c6e68337"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/timber/starter-theme/zipball/239865739fad4a09f400c33a56424b30c6e68337",
-                "reference": "239865739fad4a09f400c33a56424b30c6e68337",
-                "shasum": ""
-            },
-            "require": {
-                "wpackagist-plugin/timber-library": "0.22.*"
-            },
-            "type": "wordpress-theme",
-            "extra": {
-                "installer-paths": {
-                    "../../plugins/{$name}/": [
-                        "wpackagist-plugin/*",
-                        "type:wordpress-plugin"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "jarednova",
-                    "email": "jared@upstatement.com"
-                }
-            ],
-            "description": "Starter theme to build a Timber theme",
-            "time": "2016-06-29 14:07:16"
-        },
-        {
             "name": "wpackagist-plugin/akismet",
             "version": "dev-trunk",
             "source": {
@@ -445,15 +409,15 @@
         },
         {
             "name": "wpackagist-plugin/timber-library",
-            "version": "0.22.6",
+            "version": "dev-trunk",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/timber-library/",
-                "reference": "tags/0.22.6"
+                "reference": "trunk"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/timber-library.0.22.6.zip",
+                "url": "https://downloads.wordpress.org/plugin/timber-library.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -461,7 +425,8 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/timber-library/"
+            "homepage": "https://wordpress.org/plugins/timber-library/",
+            "time": "2016-08-02 22:31:37"
         },
         {
             "name": "wpackagist-plugin/wordpress-importer",
@@ -537,7 +502,7 @@
         "composer/installers": 0,
         "mustangostang/spyc": 20,
         "johnpbloch/wordpress": 0,
-        "upstatement/timber-starter-theme": 20,
+        "wpackagist-plugin/timber-library": 20,
         "wpackagist-plugin/clear-cache-for-timber": 20,
         "wpackagist-plugin/amazon-s3-and-cloudfront": 20,
         "wpackagist-plugin/wordpress-importer": 20,
