@@ -2,7 +2,9 @@
 ![alt text](http://cdn.designyourcode.io/wp-install-logo.jpg "WP Install")
 
 # Welcome to WP Install
-The starter kit for install and managing Wordpress using composer. You can also deploy to Heroku.
+The starter kit for installing and managing Wordpress using composer. You can also deploy to Heroku.
+
+WP Install has been designed to work as closely as possible with Wordpress and it's default settings. This is to help keep Wordpress as familiar as possible when setting it up.
 
 ## Getting Started
 
@@ -12,6 +14,7 @@ The starter kit for install and managing Wordpress using composer. You can also 
 4. Add your theme into `wp-content/themes` (this can then be committed with the rest of your project).
 
     >  **Tip:** If your theme is built upon the [timber-library](https://en-gb.wordpress.org/plugins/timber-library/) plugin, you can simply commit yout theme. The (latest version) of the plugin is installed by default. If you **do not** want to use Timber, just remove it from `composer.json`.
+    >  **Notice:** The __twentysixteen__ theme is added via composer as default (this is ignored by git), so that Wordpress has a theme to fall back to if you have not set yours yet.
 
 5. Add any required themes and plugins, either from their [wpackagist](http://wpackagist.org/) packages or by adding them in the right place in `wp-content/`
 6. Use a local PHP server and point it at your site.
@@ -47,6 +50,7 @@ If you would like to deploy a wordpress site directly to Heroku use the button b
 4. Push your project to Heroku. (There are many ways to complete this, for details see the [Heroku docs on deployment](https://devcenter.heroku.com/categories/deployment))
     
     > **Tip:** It is likely that you can simply do:
+    >
     > `git add --all`
     >
     > `git commit -m "Your commit message"`
