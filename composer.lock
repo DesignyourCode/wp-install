@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "75364a7d9b2a62b39e9de3f5832cc446",
-    "content-hash": "9fc385ca06ba65cfd5df2ead6892c096",
+    "hash": "379beffa90476473867ed4e3ae3ee9a7",
+    "content-hash": "1b79c00cd039735f919615b5a5784dd7",
     "packages": [
         {
             "name": "composer/installers",
@@ -387,6 +387,27 @@
             "time": "2016-07-28 11:50:21"
         },
         {
+            "name": "wpackagist-plugin/amazon-web-services",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/amazon-web-services/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/amazon-web-services.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/amazon-web-services/",
+            "time": "2016-07-19 17:05:15"
+        },
+        {
             "name": "wpackagist-plugin/clear-cache-for-timber",
             "version": "dev-trunk",
             "source": {
@@ -505,6 +526,7 @@
         "wpackagist-plugin/timber-library": 20,
         "wpackagist-plugin/clear-cache-for-timber": 20,
         "wpackagist-plugin/amazon-s3-and-cloudfront": 20,
+        "wpackagist-plugin/amazon-web-services": 20,
         "wpackagist-plugin/wordpress-importer": 20,
         "wpackagist-plugin/akismet": 20
     },

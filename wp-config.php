@@ -28,12 +28,6 @@ if (file_exists($parameters)) {
 define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/wp-content' );
 define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/wp-content' );
 
-// =================================
-// Setup S3 parameters for wp-offload
-// ==================================
-define('DBI_AWS_ACCESS_KEY_ID', '%%DBI_AWS_ACCESS_KEY_ID%%');
-define('DBI_AWS_SECRET_ACCESS_KEY', '%%DBI_AWS_SECRET_ACCESS_KEY%%');
-
 // ================================================
 // You almost certainly do not want to change these
 // ================================================
@@ -60,11 +54,16 @@ $table_prefix  = 'wp_';
 // ================================
 define( 'WPLANG', '' );
 
-// ===========
-// Hide errors
-// ===========
-// ini_set( 'display_errors', 1 );
-// define( 'WP_DEBUG_DISPLAY', true );
+// =================================
+// Setup S3 parameters for wp-offload
+// ==================================
+if (!file_exists($parameters)) {
+    define( 'DBI_AWS_ACCESS_KEY_ID', getenv('DBI_AWS_ACCESS_KEY_ID') );
+    define( 'DBI_AWS_SECRET_ACCESS_KEY', getenv('DBI_AWS_SECRET_ACCESS_KEY') );
+} else {
+    define( 'DBI_AWS_ACCESS_KEY_ID', $var['dbi_aws_access_key_id'] );
+    define( 'DBI_AWS_SECRET_ACCESS_KEY', $var['dbi_aws_secret_access_key'] );
+}
 
 // ====================================================================
 // Debug mode

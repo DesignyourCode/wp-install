@@ -1,6 +1,8 @@
 parameters:
-    db_name:     wp-install
-    db_user:     root
-    db_password: root
-    db_host:     localhost
-    debug:       true
+    db_name:                    wp-install
+    db_user:                    root
+    db_password:                root
+    db_host:                    localhost
+    debug:                      true
+    dbi_aws_access_key_id:
+    dbi_aws_secret_access_key: 

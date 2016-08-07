@@ -11,7 +11,7 @@ The starter kit for install and managing Wordpress using composer. You can also 
 3. Follow the onscreen instructions to add your config settings.
 4. Add your theme into `wp-content/themes` (this can then be committed with the rest of your project).
 
-    >  **Tip:** If your theme is built upon the [timber-library](https://en-gb.wordpress.org/plugins/timber-library/) plugin, you can simply commit yout theme. The (latest version) of the plugin is installed by default. If you DO NOT want to use Timber, just remove it from `composer.json`.
+    >  **Tip:** If your theme is built upon the [timber-library](https://en-gb.wordpress.org/plugins/timber-library/) plugin, you can simply commit yout theme. The (latest version) of the plugin is installed by default. If you **do not** want to use Timber, just remove it from `composer.json`.
 
 5. Add any required themes and plugins, either from their [wpackagist](http://wpackagist.org/) packages or by adding them in the right place in `wp-content/`
 6. Use a local PHP server and point it at your site.
@@ -37,7 +37,13 @@ If you would like to deploy a wordpress site directly to Heroku use the button b
 
    > **Tip:** If you are using the [ClearDB MySQL add-on](https://elements.heroku.com/addons/cleardb), you won't have to set up any configuration for your database, it will be auto-detected and pulled through. If you are not, you may need to adjust some of the config files to get your DB connectin working.
 
-3. If you would like to enable debug mode, you'll need to add **debug** environment variable: `heroku config:set DEBUG=true`
+3. You will need to set some environment variables, this can be done by running the following:
+    * `heroku config:set DEBUG=<your-mode>` - (true|false) - Enables debug mode. Set to false if you do not want debug mode on.
+    * `heroku config:set DBI_AWS_ACCESS_KEY_ID=<your-access-key>` - Add your AWS Access Key.
+    * `heroku config:set DBI_AWS_SECRET_ACCESS_KEY=<your-secret-key>` - Add your AWS Secret Access Key.
+    
+    > **Tip:** These can be changed per environment if you are using Heroku Pipelines.
+
 4. Push your project to Heroku. (There are many ways to complete this, for details see the [Heroku docs on deployment](https://devcenter.heroku.com/categories/deployment))
     
     > **Tip:** It is likely that you can simply do:

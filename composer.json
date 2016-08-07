@@ -19,6 +19,7 @@
         "wpackagist-plugin/timber-library": "dev-trunk",
         "wpackagist-plugin/clear-cache-for-timber": "dev-trunk",
         "wpackagist-plugin/amazon-s3-and-cloudfront": "dev-trunk",
+        "wpackagist-plugin/amazon-web-services": "dev-trunk",
         "wpackagist-plugin/wordpress-importer": "dev-trunk",
         "wpackagist-plugin/akismet": "dev-trunk"
     },
