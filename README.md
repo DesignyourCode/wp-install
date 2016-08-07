@@ -14,6 +14,7 @@ WP Install has been designed to work as closely as possible with Wordpress and i
 4. Add your theme into `wp-content/themes` (this can then be committed with the rest of your project).
 
     >  **Tip:** If your theme is built upon the [timber-library](https://en-gb.wordpress.org/plugins/timber-library/) plugin, you can simply commit yout theme. The (latest version) of the plugin is installed by default. If you **do not** want to use Timber, just remove it from `composer.json`.
+    >
     >  **Notice:** The __twentysixteen__ theme is added via composer as default (this is ignored by git), so that Wordpress has a theme to fall back to if you have not set yours yet.
 
 5. Add any required themes and plugins, either from their [wpackagist](http://wpackagist.org/) packages or by adding them in the right place in `wp-content/`
