@@ -5,6 +5,16 @@
             "description": "Enable debug mode for Wordpress",
             "required": "true",
             "value": "false"
+        },
+        "DBI_AWS_ACCESS_KEY_ID": {
+            "description": "The AWS Access key",
+            "required": "true",
+            "value": ""
+        },
+        "DBI_AWS_SECRET_ACCESS_KEY": {
+            "description": "The AWS Secret Access key",
+            "required": "true",
+            "value": ""
         }
     },
     "addons": [
