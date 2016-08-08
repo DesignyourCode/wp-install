@@ -8,12 +8,15 @@ WP Install has been designed to work as closely as possible with Wordpress and i
 
 ## Getting Started
 
-1. In your local phpMyAdmin, create a new database.
+1. Creata a new database for wordpress.
+
+    > **Tip:** If you don't have PHPMyAdmin or a similar GUI installed, you can run `mysql -u <username-here> -p 'CREATE DATABASE <project-name-here>'`
+
 2. Run `composer create-project designyourcode/wp-install <project-name-here>`
 3. Follow the onscreen instructions to add your config settings.
 4. Add your theme into `wp-content/themes` (this can then be committed with the rest of your project).
 
-    >  **Tip:** If your theme is built upon the [timber-library](https://en-gb.wordpress.org/plugins/timber-library/) plugin, you can simply commit yout theme. The (latest version) of the plugin is installed by default. If you **do not** want to use Timber, just remove it from `composer.json`.
+    >  **Tip:** If your theme is built upon the [timber-library](https://en-gb.wordpress.org/plugins/timber-library/) plugin, you can simply commit your theme. The (latest version) of the plugin is installed by default. If you **do not** want to use Timber, just remove it from `composer.json`.
     >
     >  **Notice:** The __twentysixteen__ theme is added via composer as default (this is ignored by git), so that Wordpress has a theme to fall back to if you have not set yours yet.
 
@@ -34,18 +37,19 @@ If you would like to deploy a wordpress site directly to Heroku use the button b
 
 **However**, if you have done the above and have a local copy, then use the following commands to deploy your site to Heroku. 
 
-    > **Tip:** To get started, you need to make sure you have Heroku Toolbelt installed on your machine: https://toolbelt.heroku.com/
+> **Tip:** To get started, you need to make sure you have Heroku Toolbelt installed on your machine: https://toolbelt.heroku.com/
 
 1. Create a new app: `heroku apps:create <your-heroku-name>` or add an existing Heroku app repo: `heroku git:remote -a <your-heroku-name>`
 2. Add a MySQL database add-on: `heroku addons:create cleardb:ignite`
 
-   > **Tip:** If you are using the [ClearDB MySQL add-on](https://elements.heroku.com/addons/cleardb), you won't have to set up any configuration for your database, it will be auto-detected and pulled through. If you are not, you may need to adjust some of the config files to get your DB connectin working.
+   > **Tip:** If you are using the [ClearDB MySQL add-on](https://elements.heroku.com/addons/cleardb), you won't have to set up any configuration for your database, it will be auto-detected and pulled through. If you are not, you may need to adjust some of the config files to get your DB connection working.
 
 3. You will need to set some environment variables, this can be done by running the following:
     * `heroku config:set DEBUG=<your-mode>` - (true|false) - Enables debug mode. Set to false if you do not want debug mode on.
     * `heroku config:set DBI_AWS_ACCESS_KEY_ID=<your-access-key>` - Add your AWS Access Key.
     * `heroku config:set DBI_AWS_SECRET_ACCESS_KEY=<your-secret-key>` - Add your AWS Secret Access Key.
     
+
     > **Tip:** These can be changed per environment if you are using Heroku Pipelines.
 
 4. Push your project to Heroku. (There are many ways to complete this, for details see the [Heroku docs on deployment](https://devcenter.heroku.com/categories/deployment))
