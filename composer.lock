@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4f04f89235b638b458bf9c424c4cb01d",
-    "content-hash": "880297923174c2f494e3311f06a0f172",
+    "hash": "f74f1ce227922830e5ce9f74bb9b89ad",
+    "content-hash": "09e4e2ef8ef70294869dc9e8f41cbdc8",
     "packages": [
         {
             "name": "composer/installers",
@@ -429,6 +429,27 @@
             "time": "2016-06-07 13:42:54"
         },
         {
+            "name": "wpackagist-plugin/disable-wordpress-updates",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/disable-wordpress-updates/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/disable-wordpress-updates.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/disable-wordpress-updates/",
+            "time": "2016-08-11 07:22:24"
+        },
+        {
             "name": "wpackagist-plugin/timber-library",
             "version": "dev-trunk",
             "source": {
@@ -548,7 +569,8 @@
         "wpackagist-plugin/amazon-s3-and-cloudfront": 20,
         "wpackagist-plugin/amazon-web-services": 20,
         "wpackagist-plugin/wordpress-importer": 20,
-        "wpackagist-plugin/akismet": 20
+        "wpackagist-plugin/akismet": 20,
+        "wpackagist-plugin/disable-wordpress-updates": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
