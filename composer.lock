@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f74f1ce227922830e5ce9f74bb9b89ad",
-    "content-hash": "09e4e2ef8ef70294869dc9e8f41cbdc8",
+    "hash": "ebe30660ccd71ec8fe1043b91098e29e",
+    "content-hash": "a5ea55b393f94bbf0b3ec11a5a103a4c",
     "packages": [
         {
             "name": "composer/installers",
@@ -492,6 +492,27 @@
             "time": "2016-05-03 19:17:33"
         },
         {
+            "name": "wpackagist-plugin/wp-smtp-config",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-smtp-config/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-smtp-config.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-smtp-config/",
+            "time": "2011-12-19 15:58:07"
+        },
+        {
             "name": "wpackagist-theme/twentysixteen",
             "version": "1.2",
             "source": {
@@ -570,7 +591,8 @@
         "wpackagist-plugin/amazon-web-services": 20,
         "wpackagist-plugin/wordpress-importer": 20,
         "wpackagist-plugin/akismet": 20,
-        "wpackagist-plugin/disable-wordpress-updates": 20
+        "wpackagist-plugin/disable-wordpress-updates": 20,
+        "wpackagist-plugin/wp-smtp-config": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -23,7 +23,8 @@
         "wpackagist-plugin/amazon-web-services": "dev-trunk",
         "wpackagist-plugin/wordpress-importer": "dev-trunk",
         "wpackagist-plugin/akismet": "dev-trunk",
-        "wpackagist-plugin/disable-wordpress-updates": "dev-trunk"
+        "wpackagist-plugin/disable-wordpress-updates": "dev-trunk",
+        "wpackagist-plugin/wp-smtp-config": "dev-trunk"
     },
     "require-dev": {
         "heroku/heroku-buildpack-php": "*"

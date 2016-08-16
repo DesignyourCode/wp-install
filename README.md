@@ -40,15 +40,16 @@ If you would like to deploy a wordpress site directly to Heroku use the button b
 > **Tip:** To get started, you need to make sure you have Heroku Toolbelt installed on your machine: https://toolbelt.heroku.com/
 
 1. Create a new app: `heroku apps:create <your-heroku-name>` or add an existing Heroku app repo: `heroku git:remote -a <your-heroku-name>`
-2. Add a MySQL database add-on: `heroku addons:create cleardb:ignite`
+2. Enable Heroku addons:
+    * `heroku addons:create cleardb:ignite` - MySQL database add-on
+    * `heroku addons:create sendgrid:starter` - Enable mailing
 
-   > **Tip:** If you are using the [ClearDB MySQL add-on](https://elements.heroku.com/addons/cleardb), you won't have to set up any configuration for your database, it will be auto-detected and pulled through. If you are not, you may need to adjust some of the config files to get your DB connection working.
+    > **Tip:** If you are using the [ClearDB MySQL add-on](https://elements.heroku.com/addons/cleardb), you won't have to set up any configuration for your database, it will be auto-detected and pulled through. If you are not, you may need to adjust some of the config files to get your DB connection working.
 
 3. You will need to set some environment variables, this can be done by running the following:
     * `heroku config:set DEBUG=<your-mode>` - (true|false) - Enables debug mode. Set to false if you do not want debug mode on.
     * `heroku config:set DBI_AWS_ACCESS_KEY_ID=<your-access-key>` - Add your AWS Access Key.
     * `heroku config:set DBI_AWS_SECRET_ACCESS_KEY=<your-secret-key>` - Add your AWS Secret Access Key.
-    
 
     > **Tip:** These can be changed per environment if you are using Heroku Pipelines.
 

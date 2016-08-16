@@ -18,6 +18,7 @@
         }
     },
     "addons": [
-        "cleardb:ignite"
+        "cleardb:ignite",
+        "sendgrid:starter"
     ]
 }

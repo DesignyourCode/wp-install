@@ -77,11 +77,16 @@ if (!file_exists($parameters)) {
     define( 'SCRIPT_DEBUG', $var['debug'] );
 }
 
-// ======================================
-// Load a Memcached config if we have one
-// ======================================
-if ( file_exists( dirname( __FILE__ ) . '/memcached.php' ) ) {
-    $memcached_servers = include( dirname( __FILE__ ) . '/memcached.php' );
+// =======================================
+// WordPress SMTP server
+// Enable mailing on Heroku using sendgrid
+// =======================================
+if (!file_exists($parameters)) {
+    define( 'WP_SMTP_HOST', 'smtp.sendgrid.net' );
+    define( 'WP_SMTP_PORT', 25 );
+    define( 'WP_SMTP_ENCRYPTION', 'tls' );
+    define( 'WP_SMTP_USER', getenv('SENDGRID_USERNAME') );
+    define( 'WP_SMTP_PASSWORD', getenv('SENDGRID_PASSWORD') );
 }
 
 // ===================
