@@ -46,7 +46,9 @@ If you would like to deploy a wordpress site directly to Heroku use the button b
 2. Enable Heroku addons:
     * `heroku addons:create cleardb:ignite` - MySQL database add-on
     * `heroku addons:create sendgrid:starter` - Enable mailing
-    * `heroku addons:create heroku-redis:hobby-dev` - Enabling sessions to be stored in Redis, so that when Heroku's Dyno restarts it doesn't log everyone out of WP. 
+    * `heroku addons:create heroku-redis:hobby-dev` - Enabling sessions to be stored in Redis
+        
+        > **Tip:** So that when Heroku's Dyno restarts it doesn't log everyone out of WP. 
 
     > **Tip:** If you are using the [ClearDB MySQL add-on](https://elements.heroku.com/addons/cleardb), you won't have to set up any configuration for your database, it will be auto-detected and pulled through. If you are not, you may need to adjust some of the config files to get your DB connection working.
 
