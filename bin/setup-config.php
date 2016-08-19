@@ -35,3 +35,18 @@ foreach ($placeholders[1] as $placeholder) {
 
 // Write new config file
 file_put_contents('../wp-config.php', $config);
+
+// PHP Redis
+$redis = getenv('REDIS_URL');
+
+if ($redis !== false) {   
+    $userini = file_get_contents('../.user.ini');
+
+    list($redisPassword, $redisHost) = explode('@', $redis);
+    list($redisUrl, $redisPass) = explode('h:', $redisPassword);
+
+    $userini = str_replace('%%REDIS_HOST%%', $redisHost, $userini);
+    $userini = str_replace('%%REDIS_PASS%%', $redisPass, $userini);
+
+    file_put_contents('../.user.ini', $userini);
+}

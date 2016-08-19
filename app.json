@@ -19,6 +19,7 @@
     },
     "addons": [
         "cleardb:ignite",
-        "sendgrid:starter"
+        "sendgrid:starter",
+        "heroku-redis:hobby-dev"
     ]
 }

@@ -13,6 +13,9 @@ WP Install has been designed to work as closely as possible with Wordpress and i
     > **Tip:** If you don't have PHPMyAdmin or a similar GUI installed, you can run `mysql -u <username-here> -p 'CREATE DATABASE <project-name-here>'`
 
 2. Run `composer create-project designyourcode/wp-install <project-name-here>`
+    
+    >  **Tip:** If you are running `composer update` or `composer install` and do not have PHP Redis installed on your system, you will need to run append your composer command with `--ignore-platform-reqs`
+
 3. Follow the onscreen instructions to add your config settings.
 4. Add your theme into `wp-content/themes` (this can then be committed with the rest of your project).
 
@@ -43,6 +46,7 @@ If you would like to deploy a wordpress site directly to Heroku use the button b
 2. Enable Heroku addons:
     * `heroku addons:create cleardb:ignite` - MySQL database add-on
     * `heroku addons:create sendgrid:starter` - Enable mailing
+    * `heroku addons:create heroku-redis:hobby-dev` - Enabling sessions to be stored in Redis, so that when Heroku's Dyno restarts it doesn't log everyone out of WP. 
 
     > **Tip:** If you are using the [ClearDB MySQL add-on](https://elements.heroku.com/addons/cleardb), you won't have to set up any configuration for your database, it will be auto-detected and pulled through. If you are not, you may need to adjust some of the config files to get your DB connection working.
 
