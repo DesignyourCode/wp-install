@@ -8,11 +8,13 @@ WP Install has been designed to work as closely as possible with Wordpress and i
 
 ## Getting Started
 
-1. Creata a new database for wordpress.
+1. Create a new database for wordpress.
 
     > **Tip:** If you don't have PHPMyAdmin or a similar GUI installed, you can run `mysql -u <username-here> -p 'CREATE DATABASE <project-name-here>'`
 
-2. Run `composer create-project designyourcode/wp-install <project-name-here>`
+2. If you have PHP Redis installed: `composer create-project designyourcode/wp-install <project-name-here>`
+   
+   If you do not have PHP Redis installed: `composer create-project designyourcode/wp-install <project-name-here> --ignore-platform-reqs`
     
     >  **Tip:** If you are running `composer update` or `composer install` and do not have PHP Redis installed on your system, you will need to run append your composer command with `--ignore-platform-reqs`
 
