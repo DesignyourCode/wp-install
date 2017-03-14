@@ -14,10 +14,11 @@
         "ext-redis": "*",
         "composer/installers": "@stable",
         "mustangostang/spyc": "dev-master",
-        "incenteev/composer-parameter-handler": "~2.0",
-        "johnpbloch/wordpress": "@stable",
+        "incenteev/composer-parameter-handler": "dev-master",
+        "johnpbloch/wordpress": "dev-master",
 
         "wpackagist-theme/twentysixteen": "1.2",
+        "upstatement/timber-starter-theme": "dev-master",
         "wpackagist-plugin/timber-library": "dev-trunk",
         "wpackagist-plugin/clear-cache-for-timber": "dev-trunk",
         "wpackagist-plugin/amazon-s3-and-cloudfront": "dev-trunk",

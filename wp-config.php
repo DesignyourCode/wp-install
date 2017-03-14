@@ -10,16 +10,16 @@ $parameters = dirname( __FILE__ ) . '/app/config/parameters.yml';
 $config = spyc_load_file($parameters);
 $var = $config['parameters'];
 
-if (file_exists($parameters)) {
-    define( 'DB_NAME', $var['db_name'] );
-    define( 'DB_USER', $var['db_user'] );
-    define( 'DB_PASSWORD', $var['db_password'] );
-    define( 'DB_HOST', $var['db_host'] );
-} else {
+if (!file_exists($parameters)) {
     define( 'DB_NAME', '%%DB_NAME%%' );
     define( 'DB_USER', '%%DB_USER%%' );
     define( 'DB_PASSWORD', '%%DB_PASSWORD%%' );
     define( 'DB_HOST', '%%DB_HOST%%' );
+} else {
+    define( 'DB_NAME', $var['db_name'] );
+    define( 'DB_USER', $var['db_user'] );
+    define( 'DB_PASSWORD', $var['db_password'] );
+    define( 'DB_HOST', $var['db_host'] );
 }
 
 // ========================
@@ -70,8 +70,14 @@ if (!file_exists($parameters)) {
 // Enable these in app/config/paramters.yml or on heroku in config vars
 // ====================================================================
 if (!file_exists($parameters)) {
-    define( 'WP_DEBUG', getenv('DEBUG') );
-    define( 'SCRIPT_DEBUG', getenv('DEBUG') );
+    if (getenv('DEBUG') === 'true' || getenv('DEBUG') === true) {
+        $debug = true;
+    } else {
+        $debug = false;
+    }
+
+    define( 'WP_DEBUG', $debug );
+    define( 'SCRIPT_DEBUG', $debug );
 } else {
     define( 'WP_DEBUG', $var['debug'] );
     define( 'SCRIPT_DEBUG', $var['debug'] );
