@@ -15,7 +15,8 @@
         "composer/installers": "@stable",
         "mustangostang/spyc": "dev-master",
         "incenteev/composer-parameter-handler": "dev-master",
-        "johnpbloch/wordpress": "dev-master",
+        "johnpbloch/wordpress-core-installer": "~0.2",
+        "johnpbloch/wordpress-core": "4.7.3",
 
         "wpackagist-theme/twentysixteen": "1.2",
         "upstatement/timber-starter-theme": "dev-master",
