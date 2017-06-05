@@ -16,7 +16,7 @@
         "mustangostang/spyc": "dev-master",
         "incenteev/composer-parameter-handler": "dev-master",
         "johnpbloch/wordpress-core-installer": "~0.2",
-        "johnpbloch/wordpress-core": "4.7.3",
+        "johnpbloch/wordpress-core": "4.7.5",
 
         "wpackagist-theme/twentysixteen": "1.2",
         "upstatement/timber-starter-theme": "dev-master",
@@ -52,7 +52,7 @@
         ],
         "compile": [
             "rm -rf app/config/parameters.yml",
-            "php bin/setup-config.php",
+            "php bin/redis-config.php",
             "php bin/generate-salts.php"
         ]
     },
