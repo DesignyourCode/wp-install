@@ -12,10 +12,10 @@ $config = spyc_load_file($parameters);
 $var = $config['parameters'];
 
 if (!file_exists($parameters)) {
-    define( 'DB_NAME', $db );
-    define( 'DB_USER', $user );
-    define( 'DB_PASSWORD', $pass );
-    define( 'DB_HOST', $host );
+    define( 'DB_NAME', $db_name );
+    define( 'DB_USER', $db_user );
+    define( 'DB_PASSWORD', $db_password );
+    define( 'DB_HOST', $db_host );
 } else {
     define( 'DB_NAME', $var['db_name'] );
     define( 'DB_USER', $var['db_user'] );
