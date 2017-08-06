@@ -16,7 +16,7 @@
         "mustangostang/spyc": "dev-master",
         "incenteev/composer-parameter-handler": "dev-master",
         "johnpbloch/wordpress-core-installer": "~0.2",
-        "johnpbloch/wordpress-core": "4.7.5",
+        "johnpbloch/wordpress-core": "4.8.1",
 
         "wpackagist-theme/twentysixteen": "1.2",
         "wpackagist-plugin/timber-library": "dev-trunk",
