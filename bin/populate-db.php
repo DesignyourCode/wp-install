@@ -25,15 +25,11 @@ if ($clearDb !== false) {
     $db_name = $db;
     
 } elseif ($jawsDb !== false) {
-
     $jawsDb = substr($jawsDb, strpos($jawsDb, '://') + 3);
-
-    var_dump($jawsDb);
 
     list($userAndPass, $hostAndDb) = explode('@', $jawsDb);
     list($user, $pass) = explode(':', $userAndPass);
     list($host, $db) = explode('/', $hostAndDb);
-    
     
     $db_user = $user;
     $db_password = $pass;
