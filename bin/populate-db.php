@@ -27,6 +27,8 @@ if ($clearDb !== false) {
 } elseif ($jawsDb !== false) {
     $jawsDb = strstr(substr($jawsDb, strpos($jawsDb, '://') + 3), '?', true);
     
+    var_dump($jawsDb);
+
     list($userAndPass, $hostAndDb) = explode('@', $jawsDb);
     list($user, $pass) = explode(':', $userAndPass);
     list($host, $db) = explode('/', $hostAndDb);
