@@ -52,22 +52,22 @@ If you would like to deploy a wordpress site directly to Heroku use the button b
     * `heroku addons:create sendgrid:starter` - Enable mailing
     * `heroku addons:create heroku-redis:hobby-dev` - Enabling sessions to be stored in Redis
 
-        > **Tip:** So that when Heroku's Dyno restarts it doesn't log everyone out of WP. 
+        > **Tip:** So that when Heroku's Dyno restarts it doesn't log everyone out of WP.
 3. Configuring the Database:
     You can either use JawsDB, ClearDB or use your own database. The following commands and settings will need to be chosen on a per site basis.
     * `heroku addons:create cleardb:ignite` - MySQL database add-on
     * `heroku addons:create jawsdb:kitefin` - MySQL database add-on
+
     > **Tip:** If you are using [ClearDB MySQL add-on](https://elements.heroku.com/addons/cleardb) or [JawsDB MySQL add-on](https://elements.heroku.com/addons/jawsdb), you won't have to set up any configuration for your database, it will be auto-detected and pulled through.
     >
     > If you are not, you can configure the DB settings using the following:
-    >
     > `DB_NAME`, `DB_USER`, `DB_PASSWORD`, `DB_HOST`
 
 4. You will need to set some environment variables, this can be done by running the following:
     * `heroku config:set DEBUG=<your-mode>` - (true|false) - Enables debug mode. Set to false if you do not want debug mode on.
     * `heroku config:set DBI_AWS_ACCESS_KEY_ID=<your-access-key>` - Add your AWS Access Key.
     * `heroku config:set DBI_AWS_SECRET_ACCESS_KEY=<your-secret-key>` - Add your AWS Secret Access Key.
-
+    
     > **Tip:** These can be changed per environment if you are using Heroku Pipelines.
 
 5. Push your project to Heroku. (There are many ways to complete this, for details see the [Heroku docs on deployment](https://devcenter.heroku.com/categories/deployment))
