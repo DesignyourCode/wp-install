@@ -84,6 +84,25 @@ if (!file_exists($parameters)) {
     define( 'SCRIPT_DEBUG', $var['debug'] );
 }
 
+// ========================================
+// Environment
+// ========================================
+if (!file_exists($parameters)) {
+    define( 'ENVIRONMENT', getenv('ENVIRONMENT') );
+} else {
+    define( 'ENVIRONMENT', $var['ENVIRONMENT'] );
+}
+
+// =============================================================
+// Disallow File Mods - Stop users being able to install plugins
+// For more information: http://bit.ly/2unkVoG
+// =============================================================
+if (!file_exists($parameters)) {
+    define( 'DISALLOW_FILE_MODS', getenv('disallow_file_mods') );
+} else {
+    define( 'DISALLOW_FILE_MODS', $var['disallow_file_mods'] );
+}
+
 // =======================================
 // WordPress SMTP server
 // Enable mailing on Heroku using sendgrid

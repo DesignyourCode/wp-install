@@ -4,5 +4,7 @@ parameters:
     db_password:                root
     db_host:                    localhost
     debug:                      true
+    environment:
+    disallow_file_mods:         false
     dbi_aws_access_key_id:
     dbi_aws_secret_access_key: 
